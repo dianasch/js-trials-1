@@ -188,4 +188,50 @@ def has_balanced_parens(string):
 
 
 def compress(string):
-    pass  # TODO: replace this line with your code
+    """Return a compressed version of the given string."""
+
+    #Creates an empty list
+    compressed = []
+
+    # Sets curr_char to an empty string
+    curr_char = ""
+
+    # Sets char_count to zero
+    char_count = 0
+
+    # Loops through each char of the string
+    for char in string:
+
+        # Checks if the char is not equal to the current char
+        if char != curr_char:
+
+            # Appends the current char
+            compressed.append(curr_char)
+
+            # Checks if the char count is greater than 1
+            if char_count > 1:
+
+                #appends the char count as a string
+                compressed.append(str(char_count))
+
+            # Sets curr char equal to char
+            curr_char = char
+
+            # Sets the char count back to 0
+            char_count = 0
+        
+        # Increases the char count by 1
+        char_count += 1
+    
+    # Appends the current char
+    compressed.append(curr_char)
+
+    # Checks if char count is greater than 1
+    if char_count > 1:
+        # If so, appends the char count as a string
+        compressed.append(str(char_count))
+
+    # Returns a joined list of each char and the number of times it appears in the string
+    return "".join(compressed)
+
+
