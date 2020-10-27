@@ -65,11 +65,25 @@ def print_as_numbered_list(items):
 
 
 def get_range(start, stop):
-    pass  # TODO: replace this line with your code
+    """Return an list of numbers in a certain range"""
+
+    #creates an empty list
+    nums = []
+
+    #num stores the value of start
+    num = start
+
+    #Num will be appended to the empty list while it is less than stop
+    while num < stop:
+        nums.append(num)
+        num += 1
+
+    #Returns the list of nums
+    return nums
 
 
 def censor_vowels(word):
-    pass  # TODO: replace this line with your code
+    """"""
 
 
 def snake_to_camel(string):
