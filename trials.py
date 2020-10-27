@@ -36,7 +36,7 @@ def get_odd_indices(items):
 
     #loops through each index
     for i in range(len(items)):
-        
+
         #checks if the index number is even or odd
         if i % 2 != 0:
 
@@ -49,7 +49,19 @@ def get_odd_indices(items):
 
 
 def print_as_numbered_list(items):
-    pass  # TODO: replace this line with your code
+    """Given a list, output contents as a numbered list."""
+
+    # Set variable i for list numbers
+    i = 1
+
+    # Loop through list of items
+    for item in items:
+
+        # Print i and item
+        print(f"{i}. {item}")
+
+        # Increment i
+        i += 1
 
 
 def get_range(start, stop):
