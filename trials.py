@@ -140,8 +140,23 @@ def longest_word_length(words):
 
 
 def truncate(string):
-    pass  # TODO: replace this line with your code
+    """Truncate repeating characters into one character"""
 
+    # Creates an empty list
+    result = []
+
+    # Loops through each char in the string
+    for char in string:
+
+        # Determines if result is empty list or if the last char in result 
+        # is equal to the current char in string
+        if len(result) == 0 or char != result[-1]:
+            
+            #If so, the current char is added to the list
+            result.append(char)
+
+    # Returns list w/out duplicates 
+    return "".join(result)
 
 def has_balanced_parens(string):
     pass  # TODO: replace this line with your code
