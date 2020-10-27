@@ -83,7 +83,25 @@ def get_range(start, stop):
 
 
 def censor_vowels(word):
-    """"""
+    """Given a string, return a string where vowels are replaced with '*'."""
+
+    # Create empty list to store characters
+    chars = []
+
+    # Loop through each letter in word
+    for letter in word:
+
+        # Determine if letter is a vowel
+        if letter in "aeiou":
+
+            # Append an asterisk to list of characters
+            chars.append("*")
+        
+        # If letter is not a vowel, append letter to list of characters
+        chars.append(letter)
+    
+    # Return a joined string of list of characters
+    return " ".join(chars)
 
 
 def snake_to_camel(string):
