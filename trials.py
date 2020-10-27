@@ -2,6 +2,7 @@
 
 
 def output_all_items(items):
+    """Print each item in the given list."""
     #Loop through each item in items
     for item in items:
 
@@ -10,6 +11,7 @@ def output_all_items(items):
 
 
 def get_all_evens(nums):
+    """Given a list of numbers, return a list of all even numbers."""
     # Create an empty list to store even nums
     even_nums = []
 
@@ -27,7 +29,23 @@ def get_all_evens(nums):
 
 
 def get_odd_indices(items):
-    pass  # TODO: replace this line with your code
+    """Returns all odd indices within a list"""
+    
+    #creates and empty list
+    result = []
+
+    #loops through each index
+    for i in range(len(items)):
+        
+        #checks if the index number is even or odd
+        if i % 2 != 0:
+
+            #appends the odd index to results
+            result.append(items[i])
+
+    # Return list
+    return result
+
 
 
 def print_as_numbered_list(items):
