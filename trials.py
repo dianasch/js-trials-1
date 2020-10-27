@@ -159,7 +159,32 @@ def truncate(string):
     return "".join(result)
 
 def has_balanced_parens(string):
-    pass  # TODO: replace this line with your code
+    """Return true if all parentheses in a given string are balanced."""
+
+    # Set variable parens to 0 to count open and close parens
+    parens = 0
+
+    # Loop through each char in string
+    for char in string:
+
+        # Determine if char is an open paren
+        if char == "(":
+
+            # If so, increment parens by 1
+            parens += 1
+
+        # Determine if char is a close paren
+        elif char == ")":
+
+            # If so, decrement parens by 1
+            parens -= 1
+
+    # If parens is not equal to 0, return False
+    if parens != 0:
+        return False
+        
+    # Otherwise, return True
+    return True
 
 
 def compress(string):
