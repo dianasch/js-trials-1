@@ -105,7 +105,19 @@ def censor_vowels(word):
 
 
 def snake_to_camel(string):
-    pass  # TODO: replace this line with your code
+    """Given a string in snake case, return a string in upper camel case"""
+
+    # Creates an empty list
+    camel_case = []
+
+    # Loop through the string and spits at _
+    for word in string.split("_"):
+
+        #Takes the first letter of the word and sets it to upper case
+        camel_case.append(f"{word[0].upper()}{word[1:]}")
+
+    # Returns a joined string 
+    return "".join(camel_case)
 
 
 def longest_word_length(words):
