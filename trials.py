@@ -116,12 +116,27 @@ def snake_to_camel(string):
         #Takes the first letter of the word and sets it to upper case
         camel_case.append(f"{word[0].upper()}{word[1:]}")
 
-    # Returns a joined string 
+    # Return a joined string of camel_case list
     return "".join(camel_case)
 
 
 def longest_word_length(words):
-    pass  # TODO: replace this line with your code
+    """Return the length of the longest word in the given list of words."""
+
+    # Set variable longest to length of first word in words
+    longest = len(words[0])
+
+    # Loop through each word in words
+    for word in words:
+
+        # Determine if longest is less than length of current word
+        if longest < len(word):
+
+            # If so, set longest to length of current word
+            longest = len(word)
+    
+    # Return longest length
+    return longest
 
 
 def truncate(string):
